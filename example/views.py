@@ -1,6 +1,7 @@
 # example/views.py
 from datetime import datetime
-
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 
 def index(request):
@@ -14,3 +15,10 @@ def index(request):
     </html>
     '''
     return HttpResponse(html)
+
+@csrf_exempt
+def upload_file(request):
+    if request.method == 'POST':
+        file = request.FILES['file']
+        print(f'Received file: {file.name}')
+        return JsonResponse({'message': f'Successfully received {file.name}'})
