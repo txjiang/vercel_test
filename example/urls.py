@@ -6,5 +6,5 @@ from example.views import index, upload_file
 urlpatterns = [
     #path('', index),
     path('admin/', admin.site.urls),
-    path('upload/', upload_file),
+    path('', upload_file),
 ]
