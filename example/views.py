@@ -20,5 +20,12 @@ def index(request):
 def upload_file(request):
     if request.method == 'POST':
         file = request.FILES['file']
-        print(f'Received file: {file.name}')
-        return JsonResponse({'message': f'Successfully received {file.name}'})
+        html = f'''
+        <html>
+            <body>
+                <h1>Hello from Vercel!</h1>
+                <p>The file we get is { file.name }.</p>
+            </body>
+        </html>
+        '''
+        return HttpResponse(html)
