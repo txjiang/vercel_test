@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://ai-resume-app.vercel.app/",
+    "https://ai-resume-app.vercel.app",
 ]
 
 ROOT_URLCONF = 'vercel_app.urls'
