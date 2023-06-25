@@ -52,6 +52,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://ai-resume-app.vercel.app/",
+]
+
 ROOT_URLCONF = 'vercel_app.urls'
 
 TEMPLATES = [
